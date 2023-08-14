@@ -28,6 +28,9 @@
 			{{ end }}
 			{{ end }}
 		</div>
+
+		{{ partial "backlinks.html" (dict "page" .) }}
+
 		{{- $.Scratch.Set "isDisqus" true -}}
 		<!-- Check if disqus short name is given -->
 		{{ if not .Site.DisqusShortname }}
