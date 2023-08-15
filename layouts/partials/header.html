@@ -36,6 +36,11 @@
         <link href="{{ $fontstyle.Permalink }}" rel="stylesheet">
 	{{ end }}
 
+<!--Tachyons-->
+	{{ $tachstyle := resources.Get "css/tachyons.css" | fingerprint }}
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ $tachstyle.Permalink }}" />
+
+
 	{{ $style := resources.Get "css/main.css" | fingerprint }}
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ $style.Permalink }}" />
 
@@ -44,6 +49,7 @@
 		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="{{ $darkstyle.Permalink }}" {{ if eq .Site.Params.mode "auto" }}media="(prefers-color-scheme: dark)"{{ end }} {{ if eq .Site.Params.mode "toggle" }}disabled{{ end }} />
 	{{ end }}
 
+	
 	<!-- Mathjax support -->
 	{{ with .Site.Params.mathjax }}
 		<script type="text/javascript"

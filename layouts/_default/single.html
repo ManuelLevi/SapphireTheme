@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main>
+<main class="flex">
 	<article>
 		<div class="title">
 			<h1 class="title">{{ .Title }}</h1>
@@ -29,7 +29,7 @@
 			{{ end }}
 		</div>
 
-		{{ partial "backlinks.html" (dict "page" .) }}
+		
 
 		{{- $.Scratch.Set "isDisqus" true -}}
 		<!-- Check if disqus short name is given -->
@@ -41,5 +41,8 @@
 		{{- partial "disqus.html" . -}}
 		{{- end -}}
 	</article>
+	<aside>
+		{{ partial "backlinks.html" (dict "page" .) }}
+	</aside>
 </main>
 {{ end }}

@@ -1,10 +1,11 @@
 /* Markdown */
 :root{
 --maincolor: #0F52BA;
+--backColor: #FDF2DA;
 --bordercl:rebeccapurple;
 --callouctcolor:dodgerblue;
 --hovercolor:navy;
---darkMaincolor: white;
+--darkMaincolor: #FDF2DA;
 --darkBackcolor: #051844;
 }
 html {
@@ -16,6 +17,7 @@ html {
 body{
   display: block;
   margin: 8px;
+  background-color: var(--backColor);
 }
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
